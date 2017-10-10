@@ -1,0 +1,31 @@
+drop database if exists bamazon;
+
+create database bamazon;
+
+use bamazon; 
+
+drop table if exists Products;
+
+CREATE TABLE Products( 
+item_id int AUTO_INCREMENT, 
+product_name varchar(30) NOT NULL, 
+department_name varchar(30) NOT NULL, 
+price int NOT NULL,
+stock_quantity int NOT NULL,
+PRIMARY KEY (item_id)
+);
+
+INSERT INTO Products(product_name, department_name, price, stock_quantity) 
+VALUES 
+('Pizza', 'Food', 5.99, 200), 
+('Pasta','Food', 5.99, 200), 
+('Tea', 'Drinks', 2.99, 200), 
+('Coffee','Drinks', 2.99, 200), 
+('CPU','Tech', 199.99, 200), 
+('GPU','Tech', 299.99, 200),
+('65" SmartTV 4K OLED','Entertainment', 999.99, 200),
+('XBox One X', 'Entertainment', 299.99, 200),
+('Desk', 'Furniture', 159.99, 200),
+('Couch', 'Furniture', 299.99, 200);
+
+USE bamazon;  SELECT * FROM products;
